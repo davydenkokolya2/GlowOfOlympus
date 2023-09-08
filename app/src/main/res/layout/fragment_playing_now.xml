@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background_meditation"
+    tools:context=".ui.playing_now.PlayingNowFragment">
+
+
+    <TextView
+        android:id="@+id/tvAllTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/textview"
+        android:textColor="@color/grey"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-40dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_background_top_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnBackPlayingNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/icon_arrow_back"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+        app:layout_constraintStart_toStartOf="@+id/imageView11" />
+
+    <ImageView
+        android:id="@+id/btnHeartPlayingNow"
+        android:layout_width="30dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/icon_heart_false"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+        app:layout_constraintEnd_toEndOf="@+id/imageView11" />
+
+    <TextView
+        android:id="@+id/tvTitleTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/_00_00"
+        android:textColor="@color/purple"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/playing_now"
+        android:textColor="@color/purple"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnPreviousTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_3_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMinus15Sec"
+        app:layout_constraintEnd_toStartOf="@+id/btnMinus15Sec"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnMinus15Sec" />
+
+    <ImageView
+        android:id="@+id/btnMinus15Sec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_minus_15_sec"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPause"
+        app:layout_constraintEnd_toStartOf="@+id/btnPause"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnPreviousTrack"
+        app:layout_constraintTop_toTopOf="@+id/btnPause" />
+
+    <ImageView
+        android:id="@+id/btnPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="62dp"
+        android:src="@drawable/icon_pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlus15Sec"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnMinus15Sec" />
+
+    <ImageView
+        android:id="@+id/btnPlus15Sec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_plus_15_sec"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPause"
+        app:layout_constraintEnd_toStartOf="@+id/btnNextTrack"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnPause"
+        app:layout_constraintTop_toTopOf="@+id/btnPause" />
+
+    <ImageView
+        android:id="@+id/btnNextTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="180"
+        android:src="@drawable/icon_3_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPlus15Sec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnPlus15Sec"
+        app:layout_constraintTop_toTopOf="@+id/btnPlus15Sec" />
+
+    <ImageView
+        android:id="@+id/ivMainCard"
+        android:layout_width="261dp"
+        android:layout_height="261dp"
+        android:layout_marginTop="22dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_card_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleTime" />
+
+    <ImageView
+        android:id="@+id/ivRightCard"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_marginStart="21dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_card_1"
+        app:layout_constraintBottom_toBottomOf="@+id/ivMainCard"
+        app:layout_constraintStart_toEndOf="@+id/ivMainCard"
+        app:layout_constraintTop_toTopOf="@+id/ivMainCard" />
+
+    <ImageView
+        android:id="@+id/ivLeftCard"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_marginEnd="21dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_card_1"
+        app:layout_constraintBottom_toBottomOf="@+id/ivMainCard"
+        app:layout_constraintEnd_toStartOf="@+id/ivMainCard"
+        app:layout_constraintTop_toTopOf="@+id/ivMainCard"
+        app:layout_constraintVertical_bias="0.516" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/textview"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivMainCard"
+        app:layout_constraintStart_toStartOf="@+id/ivMainCard"
+        app:layout_constraintTop_toBottomOf="@+id/ivMainCard" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/textview"
+        android:textColor="@color/grey"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivMainCard"
+        app:layout_constraintStart_toStartOf="@+id/ivMainCard"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvCurrentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/textview"
+        android:textColor="@color/grey"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintStart_toStartOf="@+id/progressBar" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="40dp"
+        android:progressDrawable="@drawable/custom_progress"
+        app:layout_constraintBottom_toTopOf="@+id/btnPause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

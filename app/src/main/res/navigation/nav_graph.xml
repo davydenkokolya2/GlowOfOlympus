@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/helloFragment">
+
+    <fragment
+        android:id="@+id/helloFragment"
+        android:name="com.example.glowofolympus.ui.hello.HelloFragment"
+        android:label="fragment_hello"
+        tools:layout="@layout/fragment_hello" />
+    <fragment
+        android:id="@+id/helloZeusFragment"
+        android:name="com.example.glowofolympus.ui.hello_zeus.HelloZeusFragment"
+        android:label="fragment_hello_zeus"
+        tools:layout="@layout/fragment_hello_zeus" />
+    <dialog
+        android:id="@+id/leavingFragment"
+        android:name="com.example.glowofolympus.ui.leaving.LeavingFragment"
+        android:label="fragment_leaving"
+        tools:layout="@layout/fragment_leaving" />
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="com.example.glowofolympus.ui.loading.LoadingFragment"
+        android:label="fragment_loading"
+        tools:layout="@layout/fragment_loading" />
+    <fragment
+        android:id="@+id/meditationFragment"
+        android:name="com.example.glowofolympus.ui.meditation.MeditationFragment"
+        android:label="fragment_meditation"
+        tools:layout="@layout/fragment_meditation" />
+    <dialog
+        android:id="@+id/meditationTimerFragment"
+        android:name="com.example.glowofolympus.ui.meditation_timer.MeditationTimerFragment"
+        android:label="fragment_meditation_timer"
+        tools:layout="@layout/fragment_meditation_timer" />
+    <fragment
+        android:id="@+id/playingNowFragment"
+        android:name="com.example.glowofolympus.ui.playing_now.PlayingNowFragment"
+        android:label="fragment_playing_now"
+        tools:layout="@layout/fragment_playing_now" />
+    <dialog
+        android:id="@+id/winFragment"
+        android:name="com.example.glowofolympus.ui.win.WinFragment"
+        android:label="fragment_win"
+        tools:layout="@layout/fragment_win" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.glowofolympus.ui.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+</navigation>
